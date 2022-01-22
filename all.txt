@@ -1,0 +1,9 @@
+// ---> 35
+pip install -r requeriments.txt
+
+django-admin startproject profiles_project .
+
+django-admin startapp profiles_api
+o (python3 manage.py startapp profiles_api)
+//DON'T USE '-', USE '_' FOR NAMES :) 
+// ---> |>.<|
