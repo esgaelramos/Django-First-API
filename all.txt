@@ -7,3 +7,46 @@ django-admin startapp profiles_api
 o (python3 manage.py startapp profiles_api)
 //DON'T USE '-', USE '_' FOR NAMES :) 
 // ---> |>.<|
+
+// ---> 34 
+>>>settings.py
+#ADD THE APPS AND REST-FRAMEWORK
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    'profiles_api',
+##
+#ADD DATABASE 
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'apiprofile',
+        'USER': 'postgres',
+        'PASSWORD': 'SEXYpsql!88',
+        'HOST': '127.0.0.1',
+        'DATABASE_PORT': '5432',
+    }
+##
+#CHANGE ZONE AND LANGUAGE
+    LANGUAGE_CODE = 'es-mx'
+
+    TIME_ZONE = 'America/Mexico_City'
+###
+
+>>>requeriments.txt
+#ADD LIB FOR PSQL PSYCOPG2
+psycopg2==2.9.3
+###
+pip install requeriments.txt
+
+#CREATE DATABASE PSQL
+sudo -u postgres PSQL
+****
+****
+=# CREATE DATABASE apiprofile;
+=# \l
+=# \dt
+###
+
+
+// ---> |>.<|
+    
