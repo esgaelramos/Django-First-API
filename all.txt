@@ -117,7 +117,11 @@ class UserProfileManager(BaseUserManager):
 ###
 // ---> |>.<|
 
-// ---> 31 
+// ---> 31
+>>>settings.py
+#ADD FOR AUTH USER 
+AUTH_USER_MODEL = 'profiles_api.UserProfile'
+###
 
 // ---> |>.<|
 
