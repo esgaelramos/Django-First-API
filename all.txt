@@ -39,7 +39,7 @@ psycopg2==2.9.3
 pip install requeriments.txt
 
 #CREATE DATABASE PSQL
-sudo -u postgres PSQL
+sudo -u postgres psql
 ****
 ****
 =# CREATE DATABASE apiprofile;
@@ -122,9 +122,31 @@ class UserProfileManager(BaseUserManager):
 #ADD FOR AUTH USER 
 AUTH_USER_MODEL = 'profiles_api.UserProfile'
 ###
-
+python3 manage.py makemigrations profiles_api
+//only migrate UserProfile, why not UserProfileManager?, idk:(
+python3 manage.py migrate
 // ---> |>.<|
 
 // ---> 30 
+sudo -u postgres psql apiprofile
+=# \l
+=# \dt (Check if your model was created)
 
+//CREATE A SUPER-USER
+python3 manage.py createsuperuser
+{
+    esgaelramos@gmail.com
+    Gael
+    1234
+    1234
+}
+//REGISTER THE MODEL
+>>>admin.py
+#IMPORT AND ADD MODEL VISIBLE IN ADMIN
+from profiles_api import models
+
+admin.site.register(models.UserProfile)
+###
+python3 manage.py runserver
+(Check '/' and '/admin'; Check if you user profile has the password with hash;)
 // ---> |>.<|
