@@ -174,3 +174,12 @@ class HelloAPIView(APIView):
         return ResourceWarning({'message': 'Hello', 'an_apiview': an_apiview})
 ###
 // ---> |>.<|
+
+// ---> 29
+>>>profiles_project/urls.py
+#ADD THE FILE URLS OF APP
+from django.urls import path, include
+    path('api/'), include(('profiles_api.urls'))
+###
+->Create a urls.py in the app
+// ---> |>.<|
