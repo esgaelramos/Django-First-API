@@ -17,4 +17,4 @@ class HelloAPIView(APIView):
             'MANUAL MAPPING URLS'
         ]
         #Always we need a response in format JSON = dictionary
-        return ResourceWarning({'message': 'Hello', 'an_apiview': an_apiview})
+        return Response(({'message': 'Hello', 'an_apiview': an_apiview}))
