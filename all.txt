@@ -183,3 +183,15 @@ from django.urls import path, include
 ###
 ->Create a urls.py in the app
 // ---> |>.<|
+
+// ---> 28
+#ADD AND CREATE THE URL OF APP
+from django.urls import path
+
+from profiles_api import views
+
+urlpatterns = [
+    path('hello-view/', views.HelloAPIView.as_view()),
+]
+###
+// ---> |>.<|
