@@ -186,6 +186,7 @@ from django.urls import path, include
 
 // ---> 28
 #ADD AND CREATE THE URL OF APP
+>>>profiles_api/urls.py
 from django.urls import path
 
 from profiles_api import views
@@ -194,4 +195,17 @@ urlpatterns = [
     path('hello-view/', views.HelloAPIView.as_view()),
 ]
 ###
+(Check in runserver)
+// ---> |>.<|
+
+// ---> 28
+It's a good practice has all serializer in one file
+>>>profiles_api/serializer.py
+#CREATE A SERIALIZER EXAMPLE
+from rest_framework import serializers
+
+class HelloSerializer(serializers.Serializer):
+    """ EXAMPLE FOR SERIALIZER AND TEST APIVIEW """
+    name = serializers.CharField(max_length=10)
+    
 // ---> |>.<|
