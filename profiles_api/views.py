@@ -23,4 +23,16 @@ class HelloAPIView(APIView):
         #Always we need a response in format JSON = dictionary
         return Response(({'message': 'Hello', 'an_apiview': an_apiview}))
 
+    def post(self, request):
+        """ CREATE A MESSAGE WITH OUR NAME """
+        serializer = self.serializer_class(data=request.data)
 
+        if serializer.is_valid():
+            name = serializer.validated_data.get('name')
+            message = f'Hellor (name)'
+            return Response(({'message': message}))
+        else:
+            return Response(
+                serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST
+            )
