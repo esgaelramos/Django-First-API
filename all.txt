@@ -207,5 +207,17 @@ from rest_framework import serializers
 class HelloSerializer(serializers.Serializer):
     """ EXAMPLE FOR SERIALIZER AND TEST APIVIEW """
     name = serializers.CharField(max_length=10)
-    
+###
+// ---> |>.<|
+
+// ---> 27
+//status tiene codigos html como respuestas api
+>>>profiles_api/views.py
+#IMPORT AND ADD CLASS SERIALIZER
+from rest_framework import status
+
+from profiles_api import serializers
+
+    serializer_class = serializers.HelloSerializer
+###
 // ---> |>.<|
