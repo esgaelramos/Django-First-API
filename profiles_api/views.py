@@ -36,3 +36,8 @@ class HelloAPIView(APIView):
                 serializer.errors,
                 status=status.HTTP_400_BAD_REQUEST
             )
+    
+    def put(self, request, pk=None):
+        """ MANAGER: UPDATE A OBJECT"""
+        return Response({'method': 'PUT'})
+        
