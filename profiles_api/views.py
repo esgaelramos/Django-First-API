@@ -38,9 +38,13 @@ class HelloAPIView(APIView):
             )
     
     def put(self, request, pk=None):
-        """ MANAGER: UPDATE A OBJECT"""
+        """ MANAGER: UPDATE A OBJECT """
         return Response({'method': 'PUT'})
     
     def patch(self, request, pk=None):
-        """ MANAGER: PARTIAL UPDATE A OBJECT"""
+        """ MANAGER: PARTIAL UPDATE A OBJECT """
         return Response({'method': 'PATCH'})    
+
+    def delete(self, request, pk=None):
+        """ MANAGER: DELETE A OBJECT """
+        return Response({'method': 'DELETE'})    

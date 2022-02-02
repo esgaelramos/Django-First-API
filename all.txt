@@ -253,3 +253,21 @@ from profiles_api import serializers
         return Response({'method': 'PUT'})
 ###
 // ---> |>.<|
+
+// ---> 25
+>>>profiles_api/views.py
+#ADD PATCH()
+    def patch(self, request, pk=None):
+        """ MANAGER: PARTIAL UPDATE A OBJECT """
+        return Response({'method': 'PATCH'})  
+###
+// ---> |>.<|
+
+// ---> 25
+>>>profiles_api/views.py
+#ADD DELETE()
+    def delete(self, request, pk=None):
+        """ MANAGER: DELETE A OBJECT """
+        return Response({'method': 'DELETE'}) 
+###
+// ---> |>.<|
