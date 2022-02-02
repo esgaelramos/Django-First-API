@@ -271,3 +271,7 @@ from profiles_api import serializers
         return Response({'method': 'DELETE'}) 
 ###
 // ---> |>.<|
+
+CHECK WITH RUNSERVER
+AND THE END! :)
+I NEED MORE PRACTICE
