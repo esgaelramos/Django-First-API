@@ -5,7 +5,7 @@ Make it with: Python, Django, Rest-Frameworl, PSQL.
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install django.
-Remember that SQLite it's default DB of Django and not need at lib.
+Remember that psycopg2 it's a lib need for DB of Django PSQL.
 
 ```bash
 pip install django==4.0.2
